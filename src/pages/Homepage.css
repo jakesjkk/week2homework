@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+.big-container {
+  margin: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 22px;
+  margin: 3px;
+}
+
+.icon-plus {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+
+.icon-right-bottom {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.card-box {
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.icon-box {
+  display: inline-block;
+  justify-content: space-between;
+  float: right;
+}
+
+.word {
+  height: 80px;
+  font-size: 40px;
+}
+
+.pronunciation {
+  height: 60px;
+  font-size: 15px;
+}
+
+.content {
+  height: 60px;
+  font-size: 25px;
+}
+
+.example {
+  height: 60px;
+  font-size: 15px;
+  color: cornflowerblue;
+}
+
+.interpret {
+  height: 60px;
+  font-size: 15px;
+  color: cornflowerblue;
+}

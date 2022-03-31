@@ -1,0 +1,10 @@
+.word-post-box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.input {
+  margin: 25px;
+}

@@ -1,17 +1,42 @@
+/* eslint-disable */
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+
+
+// let wordInfo = [
+//     { word : 'explain', pronunciation : word, content : '설명하다', example : '문장1', interpret: '해석1' },
+//     { word : 'go', pronunciation : word, content : '가다', example : '문장2', interpret : '해석2'},
+//     { word : 'make', pronunciation : word, content : '만들다', example : '문장3', interpret : '해석3'}
+// ]
+
+let store = createStore(()=>{ return [
+    { word : 'explain', pronunciation : 'pro1', content : '설명하다', example : '문장1', interpret: '해석1' },
+    { word : 'go', pronunciation : 'pro2', content : '가다', example : '문장2', interpret : '해석2'},
+    { word : 'make', pronunciation : 'pro3', content : '만들다', example : '문장3', interpret : '해석3'}
+]  });
+
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <React.StrictMode>
+        <BrowserRouter>
+            <Provider store={store}>
+                <App />
+            </Provider>        
+        </BrowserRouter>
+    </React.StrictMode>, 
+
+
+
+document.getElementById('root'));
+
